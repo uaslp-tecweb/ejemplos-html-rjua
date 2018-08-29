@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+<!--resumen etiquetas
+form
+input
+fieldest
+legend
+div
+select
+open
+
+resumen atributos
+
+type
+name
+value
+for
+required
+title(tooltip)
+pattern expreciones regulares  pattern="[A-Z]*"
+rows
+colds
+maxlength-->
 <html lang="es">
 <head>
     <title>formularios</title>
@@ -9,12 +30,13 @@
     <h2>ejemplo de login</h2>
     <form>
         <div>
-                <label>usuario:</label>
-                <input type="text" name="usuario">
+                <label for="usuario">usuario:</label>
+                <input type="text" name="usuario" id="usuario" required >
         </div>
         <div>
-            <label>contraseña</label>
-            <input type="pasword" name="contraseña" >
+            <label for="contraseña">contraseña</label>
+            <input type="pasword" name="contraseña"  id="contraseña" required
+            placeholder="al menos 6 caracteres" minlength="6" title="la contraseña debe de tener 6 caracterescomo minimo">
         </div>
         
         <input type="submit">
@@ -28,16 +50,16 @@
             lenjuages favoritos   
         </legend>
         <div>
-            <input type="checkbox" name="lenguaje" value="c">
-            <label>c</label> 
+            <input id="c" type="checkbox" name="lenguaje" value="c">
+            <label for="c">c</label> 
         </div>
         <div>
-             <input type="checkbox" name="lenguaje" value="javea">
-             <label>java</label>
+             <input id="java" type="checkbox" name="lenguaje" value="java">
+             <label for="java">java</label>
         </div>
         <div>
-             <input type="checkbox"name="lenguaje" value="pyhton"> 
-             <label>python</label>
+             <input id="pyhton" type="checkbox"name="lenguaje" value="pyhton"> 
+             <label for="pyhton">python</label>
         </div>
         <div>
              <input type="checkbox"name="lenguaje" value="c#"> 
@@ -66,8 +88,38 @@
         </fieldset>
         <input type="submit">
     </form>
-    
+    <h2>otros tipos de input </h2>
+    <form>
+        <input type="date" name="fecha">
+        <input type="time" name="hora">
+        <input type="email" name="email">
+        <input type="file" name="archivo">
+        <input type="number" name="numero" value="0">
+        <input type="range" name="rango" value="100">
+        <input type="submit">
+    </form>
+    <h2>ejemplo de dropdown(cobo-box)</h2>
+    <form>
+        <label for="carrera">elige tu carrera</label>
+
+
+        <select id="carrera" name="carrera">
+            <option value="compu"> computacion 1</option>
+            <option value="info">informatica 2</option>
+            <option value="isi">sistemas inteligentes 3</option>
+        </select>
+        <input type="submit">
+    </form>
+
+    <h2>ejemplo cuadro de texto</h2>
+    <form >
+        <label form="comentarios" >escribe tus comentarios</label>
+        <textarea  id="comentarios" name="comentarios" cols="30" rows="10" placeholder="tu opinion es inportante" maxlength="10"></textarea>
+    </form>
+
 </body>
+
+
 <a   href = "https://validator.w3.org/check?uri=referer"
                 target = "_blank" >
 <img  src = "https://www.w3.org/Icons/valid-xhtml10"
